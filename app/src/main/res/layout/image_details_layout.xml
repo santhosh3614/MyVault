@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white" >
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_details_properties"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="Details"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black" />
+
+    <View
+        android:id="@+id/image_details_top_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@+id/image_details_properties"
+        android:background="@android:color/black" />
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_details_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_details_top_divider"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Name : "
+        android:textColor="@android:color/black" />
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_details_name_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_details_name"
+        android:layout_alignTop="@+id/image_details_name"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/image_details_name"
+        android:text="Image 1"
+        android:textColor="@android:color/black" />
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_details_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/image_details_name"
+        android:layout_below="@+id/image_details_name"
+        android:layout_marginTop="10dp"
+        android:text="Path : "
+        android:textColor="@android:color/black" />
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_details_path_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_details_path"
+        android:layout_alignTop="@+id/image_details_path"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/image_details_path"
+        android:text="imahe/imajhe/jhdf/akjshdf/kjhsdfu"
+        android:textColor="@android:color/black" />
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_details_date_taken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/image_details_path"
+        android:layout_below="@+id/image_details_path"
+        android:layout_marginTop="10dp"
+        android:text="Date Taken : "
+        android:textColor="@android:color/black" />
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_details_date_taken_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_details_date_taken"
+        android:layout_alignTop="@+id/image_details_date_taken"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/image_details_date_taken"
+        android:text="15165"
+        android:textColor="@android:color/black" />
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_details_date_modified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/image_details_date_taken"
+        android:layout_below="@+id/image_details_date_taken"
+        android:layout_marginTop="10dp"
+        android:text="Date Modified : "
+        android:textColor="@android:color/black"
+        android:visibility="gone" />
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_details_date_modified_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/image_details_date_modified"
+        android:layout_alignBottom="@+id/image_details_date_modified"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/image_details_date_modified"
+        android:text="16551"
+        android:textColor="@android:color/black"
+        android:visibility="gone" />
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_details_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/image_details_date_taken"
+        android:layout_below="@+id/image_details_date_taken"
+        android:layout_marginTop="10dp"
+        android:text="Size"
+        android:textColor="@android:color/black" />
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_details_size_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_details_size"
+        android:layout_alignTop="@+id/image_details_size"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/image_details_size"
+        android:text="7548454 Bytes"
+        android:textColor="@android:color/black" />
+
+    <View
+        android:id="@+id/image_details_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@+id/image_details_size"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black" />
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_details_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/image_details_divider"
+        android:background="@drawable/selector_dialog_button"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Done"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>

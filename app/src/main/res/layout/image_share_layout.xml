@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33BBFFFF"
+    android:orientation="vertical" >
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/image_share_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="MyVault"
+        android:textSize="@dimen/textSize_small"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/image_share_hiding_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_share_title"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/image_share_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/image_share_hiding_progress"
+        android:layout_below="@+id/image_share_hiding_progress"
+        android:paddingLeft="10dp"
+        android:text="TextView"
+        android:visibility="gone" />
+
+</RelativeLayout>

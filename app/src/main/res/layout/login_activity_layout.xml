@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg_green"
+    tools:context="com.justsmartapps.myvault.activities.LoginActivity" >
+
+    <!-- <android.inputmethodservice.KeyboardView -->
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/login_keyboard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:keyBackground="@drawable/selector_key"
+        android:keyTextColor="@android:color/white"
+        android:keyTextSize="20dp" />
+
+    <EditText
+        android:id="@+id/login_editLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/login_keyboard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20.0dp"
+        android:layout_marginTop="15.0dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:maxLength="4"
+        android:singleLine="true"
+        android:visibility="invisible" >
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:id="@+id/login_images_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/login_keyboard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/radioButton5"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="5.0dp"
+            android:layout_weight="1.0"
+            android:clickable="false"
+            android:padding="1.0dp"
+            android:src="@drawable/selector_radio_login" />
+
+        <ImageView
+            android:id="@+id/radioButton2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="5.0dp"
+            android:layout_weight="1.0"
+            android:clickable="false"
+            android:padding="1.0dp"
+            android:src="@drawable/selector_radio_login" />
+
+        <ImageView
+            android:id="@+id/radioButton3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="5.0dp"
+            android:layout_weight="1.0"
+            android:clickable="false"
+            android:padding="1.0dp"
+            android:src="@drawable/selector_radio_login" />
+
+        <ImageView
+            android:id="@+id/radioButton4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="5.0dp"
+            android:layout_weight="1.0"
+            android:clickable="false"
+            android:padding="1.0dp"
+            android:src="@drawable/selector_radio_login" />
+    </LinearLayout>
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/login_errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/login_editLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:text="Passcode mismatch."
+        android:textColor="@color/red"
+        android:visibility="visible" />
+
+    <com.justsmartapps.myvault.view.FlatTextView
+        android:id="@+id/login_loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/login_errorText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="3dp"
+        android:text="Enter 4 Digit Passcode"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textSize_small" />
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/login_loginText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_launcher"
+        android:text="MyVault"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textSize_large" />
+
+</RelativeLayout>

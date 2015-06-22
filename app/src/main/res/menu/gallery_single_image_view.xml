@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.androiddev.gallerylock.LoginActivity" >
+
+    <item
+        android:id="@+id/gallery_single_image_hide"
+        android:icon="@drawable/unhide_image"
+        android:title="Un-Hide Image"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/gallery_single_image_share"
+        android:icon="@drawable/share_gallery_images"
+        android:title="Share Image"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/gallery_single_image_more"
+        android:icon="@drawable/more_image_options"
+        android:title="Share Image"
+        app:showAsAction="always">
+    </item>
+
+</menu>

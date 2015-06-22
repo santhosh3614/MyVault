@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="GreenBlue">#FF57AEAE</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="LightBlue">#FF90CEE3</color>
+    <color name="DarkBlue">#80000000</color>
+    <color name="LightRed">#FF4E2A36</color>
+    <color name="DarkRed">#FF852C3E</color>
+    <color name="bullet_bg_focus">#8026a69a</color>
+    <color name="bullet_bg">#80b2dfdb</color>
+    <color name="SemiBlack">#882D3037</color>
+    <color name="SemiGrey">#FF424242</color>
+    <color name="md__transparent">#00000000</color>
+    <color name="md__defaultBackground">#FF555555</color>
+    <color name="key_bg">#77e0e0e0</color>
+    <color name="key_bg_focus">#77bdbdbd</color>
+    <color name="app_bg">#bcaaa4</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="SemiGreen">#3300FF00</color>
+    
+    <!-- Final Colors -->
+    <color name="app_back_ground">#F2F1EF</color>
+    <color name="app_settings_back_ground">#EEEEEE</color>
+    <color name="app_back_ground_focus">#DADFE1</color>
+    
+    
+
+    <!-- grass -->
+    <color name="grass_darker">#124c38</color>
+    <color name="grass_dark">#1e7d5b</color>
+    <color name="grass_primary">#2ab081</color>
+    <color name="grass_login">#87D37C</color>
+    <color name="grass_light">#a8e3ce</color>
+    <color name="grass_darker_tran">#BB124c38</color>
+    <color name="grass_dark_tran">#BB1e7d5b</color>
+    <color name="grass_primary_tran">#BB2ab081</color>
+    <color name="grass_light_tran">#8887D37C</color>
+    <color name="grass_action_tran">#A0a8e3ce</color>
+
+    
+     <color name="green_darker">#124c38</color>
+    <color name="green_dark">#1e7d5b</color>
+    <color name="green_primary">#2ab081</color>
+    <color name="green_login">#87D37C</color>
+    <color name="green_light">#a8e3ce</color>
+    
+     <color name="candy_darker">#80363c</color>
+    <color name="candy_dark">#bf505a</color>
+    <color name="candy_primary">#f56773</color>
+    <color name="candy_light">#f5c4c8</color>
+    
+    <integer-array name="grass">
+        <item>@color/grass_darker</item>
+        <item>@color/grass_dark</item>
+        <item>@color/grass_primary</item>
+        <item>@color/grass_light</item>
+    </integer-array>
+
+</resources>

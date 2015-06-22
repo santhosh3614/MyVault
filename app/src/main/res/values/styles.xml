@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="CustomActionBarTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle" tools:targetApi="11">@style/MyActionBar</item>
+        <item name="android:actionBarItemBackground" tools:targetApi="11">@drawable/selector_actionbar_button</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarItemBackground">@drawable/selector_actionbar_button</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <!-- the theme applied to the application or activity -->
+    <style name="CustomActionBarOverLayTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowActionBarOverlay" tools:targetApi="11">true</item>
+        <item name="android:actionBarStyle" tools:targetApi="11">@style/MyActionBar_tran</item>
+         <item name="android:actionBarItemBackground" tools:targetApi="11">@drawable/selector_actionbar_button</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarItemBackground">@drawable/selector_actionbar_button</item>
+        <item name="actionBarStyle">@style/MyActionBar_tran</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/grass_primary</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/grass_primary</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar_tran" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/grass_primary_tran</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/grass_primary_tran</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="@style/Theme.AppCompat">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>

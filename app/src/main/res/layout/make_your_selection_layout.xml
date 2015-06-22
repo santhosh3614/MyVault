@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/selection_make_your_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Make Your Selection"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <View
+        android:id="@+id/selection_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/selection_make_your_title"
+        android:background="@android:color/black" />
+
+    <View
+        android:id="@+id/selection_divider_two"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/selection_properties"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/selection_select_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selection_divider_two"
+        android:background="@drawable/selector_spinner_drop_down"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Select All"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/selection_properties"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/selection_divider"
+        android:background="@drawable/selector_spinner_drop_down"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Properties"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

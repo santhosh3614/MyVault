@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.justsmartapps.myvault"
+    android:versionCode="9"
+    android:versionName="1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:maxSdkVersion="22"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <application
+        android:name="com.justsmartapps.myvault.activities.GalleryLockApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:manageSpaceActivity="com.justsmartapps.myvault.activities.ManageSpaceActivity"
+        android:theme="@style/CustomActionBarTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.justsmartapps.myvault.activities.GalleryActivity"
+            android:configChanges="screenSize|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.justsmartapps.myvault.activities.FAQActivity"
+            android:configChanges="screenSize|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:excludeFromRecents="true" />
+        <activity
+            android:name="com.justsmartapps.myvault.activities.LoginActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.justsmartapps.myvault.activities.VerificationActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.justsmartapps.myvault.activities.GalleryViewActivity"
+            android:configChanges="screenSize|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.justsmartapps.myvault.activities.ImagePagerActivity"
+            android:configChanges="screenSize|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarOverLayTheme" >
+        </activity>
+        <activity
+            android:name="com.justsmartapps.myvault.activities.SecurityQuestionActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <receiver
+            android:name="com.justsmartapps.myvault.receivers.GalleryLockDeviceAdminReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                <action android:name="android.app.action.ACTION_DEVICE_ADMIN_DISABLE_REQUESTED" />
+                <action android:name="android.app.action.ACTION_DEVICE_ADMIN_DISABLED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+        </receiver>
+
+        <activity
+            android:name="com.justsmartapps.myvault.activities.ManageSpaceActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.AppCompat.CompactMenu" >
+        </activity>
+        <activity
+            android:name="com.justsmartapps.myvault.activities.RestoreActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.Transparent" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.justsmartapps.myvault.activities.ImageShareActivity"
+            android:excludeFromRecents="true"
+            android:label="MyVault"
+            android:theme="@style/Theme.Transparent" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.justsmartapps.myvault.providers.CustomContentProvider"
+            android:authorities="com.androiddev.myvault.contentprovider"
+            android:exported="false" >
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gallery_view_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_back_ground" >
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/gallery_view_top_layout_adview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9116505711607766/8775949130"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/gallery_view_grid_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gallery_view_options"
+        android:layout_below="@+id/gallery_view_top_layout_adview"
+        android:visibility="visible" >
+
+        <GridView
+            android:id="@+id/gallery_view_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:columnWidth="@dimen/image_width"
+            android:gravity="center"
+            android:horizontalSpacing="1dp"
+            android:numColumns="auto_fit"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="1dp" >
+        </GridView>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/gallery_view_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <!-- <RelativeLayout -->
+    <!-- android:id="@+id/gallery_view_options" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentBottom="true" > -->
+    <!-- gallery_view_options -->
+
+    <LinearLayout
+        android:id="@+id/gallery_view_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <com.justsmartapps.myvault.view.FlatButton
+            android:id="@+id/gallery_view_hide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="9dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="9dp"
+            android:text="Hide"
+            android:textSize="@dimen/textSize_small" />
+
+        <TextView
+            android:id="@+id/gallery_view_hide_hide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:clickable="true"
+            android:gravity="center" />
+
+        <com.justsmartapps.myvault.view.FlatButton
+            android:id="@+id/gallery_view_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="9dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="9dp"
+            android:text="Cancel"
+            android:textSize="@dimen/textSize_small" />
+    </LinearLayout>
+
+    <!-- <ImageButton -->
+    <!-- android:id="@+id/gallery_view_more_options" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:background="@android:color/transparent" -->
+    <!-- android:padding="7dp" -->
+    <!-- android:src="@drawable/more_image_options" /> -->
+    <!-- </RelativeLayout> -->
+
+</RelativeLayout>
